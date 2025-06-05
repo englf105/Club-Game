@@ -2,6 +2,7 @@ image_speed = 0;
 enemy_hit = false;
 invincible = false;
 enemy_hp = 3;
+can_attack = false;
 
 i = 0;
 j = 0;

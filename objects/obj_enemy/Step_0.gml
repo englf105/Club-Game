@@ -12,15 +12,17 @@ with (my_weapon) {
 	y = _yy
 }
 
-//when the enemy enters the collision circle
+//when the enemy leaves the collision circle
 if !_player_domain {
+	my_weapon.alarm[1] = 20;
 	_walkspeed = 1;
+	can_attack = false;
 }
 
-//if the enemy is not in the collision circle
+//if the enemy is in the collision circle
 if _player_domain {
 	_walkspeed = 0;
-	obj_enemy_weapon.alarm[1] = 20;
+	can_attack = true;
 }
 
 //move towards player
