@@ -10,4 +10,4 @@ if(choose(0,1) == 0) {
 
 instance_create_layer(_xx,_yy, "Instances", obj_enemy);
 
-alarm[0] = (4 * room_speed) / (level / 3);
+alarm[0] = (4 * room_speed);

@@ -2,7 +2,7 @@
 var _xx = x;
 var _yy = y;
 var _walkspeed = 1;
-var _player_domain = collision_circle(global.player_x, global.player_y, 16, id, false, false);
+var _player_domain = collision_circle(global.player_x, global.player_y, enemy_distance, id, false, false);
 
 // so that the weapon is always by the enemy
 with (my_weapon) {
@@ -16,13 +16,11 @@ with (my_weapon) {
 if !_player_domain {
 	my_weapon.alarm[1] = 20;
 	_walkspeed = 1;
-	can_attack = false;
 }
 
 //if the enemy is in the collision circle
 if _player_domain {
 	_walkspeed = 0;
-	can_attack = true;
 }
 
 //move towards player

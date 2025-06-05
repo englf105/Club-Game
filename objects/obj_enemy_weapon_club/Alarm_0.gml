@@ -7,7 +7,7 @@ if image_index == 3 {
 
 //if still in range
 with (instance_nearest(x,y, obj_enemy)) {
-	if collision_circle(global.player_x, global.player_y, 16, id, false, false) {
+	if collision_circle(global.player_x, global.player_y, enemy_distance, id, false, false) {
 		my_weapon.alarm[1] = 60;
 
 	}
