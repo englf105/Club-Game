@@ -11,8 +11,8 @@
   "name":"obj_enemy_weapon_club",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"enemy_weapons",
+    "path":"folders/Objects/enemy_weapons.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_club",
-    "path":"sprites/spr_club/spr_club.yy",
+    "name":"spr_sword0",
+    "path":"sprites/spr_sword0/spr_sword0.yy",
   },
   "spriteMaskId":null,
   "visible":true,

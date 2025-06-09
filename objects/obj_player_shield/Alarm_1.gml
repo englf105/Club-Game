@@ -1,0 +1,3 @@
+invincible = false;
+shield_hit = false
+image_blend = c_white;

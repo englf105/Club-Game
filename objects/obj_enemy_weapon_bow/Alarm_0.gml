@@ -1,8 +1,9 @@
- image_index += 1;
+image_index += 1;
  
 if image_index == 3 {
 	var _inst = instance_create_layer(x, y, "Instances", obj_enemy_arrow);
 	_inst.direction = image_angle - 45;
+	_inst.image_angle = image_angle;
 	image_index = 0;
 }
 else {
@@ -17,5 +18,4 @@ if image_index == 0 {
 		}
 	}
 }
-
 	

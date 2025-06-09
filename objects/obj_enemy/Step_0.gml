@@ -12,6 +12,15 @@ with (my_weapon) {
 	y = _yy
 }
 
+if has_shield {
+	with (my_weapon1) {
+		image_angle = point_direction(x, y, global.player_x, global.player_y) + 90;
+		image_speed = 0;
+		x = _xx
+		y = _yy
+	}
+}
+
 //when the enemy leaves the collision circle
 if !_player_domain {
 	my_weapon.alarm[1] = 20;
@@ -29,11 +38,19 @@ move_towards_point(global.player_x, global.player_y, _walkspeed);
 
 // Invinciblity frames
 if (enemy_hit == true && invincible == false) {
-	image_blend = c_red;
-	enemy_hp -= 1;
-	invincible = true;
-	alarm[1] = 15;
+	if has_shield = false {
+		enemy_hp -= global.damage;
+		image_blend = c_red;
+		invincible = true;
+		alarm[1] = 15;
+	}
 }
+
+//layer depth
+if global.player_y < y {
+	depth = 1;
+}
+else depth = 5;
 
 // Death
 if enemy_hp <= 0 {
@@ -41,17 +58,16 @@ if enemy_hp <= 0 {
 	with (my_weapon) {
 		instance_destroy();
 	}
+	if enemy_type = 2{
+		with (my_weapon1) {
+			instance_destroy();
+		}
+	}
 	score += 5;
 	repeat (10) {
 		instance_create_layer(x,y,"Instances", obj_hit_particle)
 	}
 }
-
-//layer depth
-if global.player_y < y {
-	depth = 2;
-}
-else depth = 4;
 
 // Animation Direction
 if (global.player_x > x) and (global.player_y > y) {

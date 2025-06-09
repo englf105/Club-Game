@@ -36,6 +36,21 @@ if (hit == true && invincible == false) {
 	alarm[0] = 15;
 }
 
+//Shield stuff
+if has_shield = true && !get_shield {
+	my_weapon = instance_create_layer(x, y, "Instances", obj_player_shield);
+	get_shield = true
+}
+
+if has_shield {
+	with (my_weapon) {
+		image_angle = global.player_direction + 45;
+		image_speed = 0;
+		x = global.player_x
+		y = global.player_y
+	}
+}
+
 // Animation Direction
 if (mouse_x > x) and (mouse_y > y) {
 	image_index = 0 + j; //bottom right

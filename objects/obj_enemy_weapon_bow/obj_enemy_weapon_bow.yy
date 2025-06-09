@@ -11,8 +11,8 @@
   "name":"obj_enemy_weapon_bow",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"enemy_weapons",
+    "path":"folders/Objects/enemy_weapons.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_bow",
-    "path":"sprites/spr_bow/spr_bow.yy",
+    "name":"spr_bow0",
+    "path":"sprites/spr_bow0/spr_bow0.yy",
   },
   "spriteMaskId":null,
   "visible":true,
